@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+            <fieldset class="form-group">
+                <label for="project_name">名稱</label>
+                <%= f.text_field :name, class:"form-control", placeholder:"專案名稱"%>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="exampleSelect1">分類</label>
+                <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name)%>
+            </fieldset>
+            
+            <fieldset class="form-group">
+                <label for="project_description">圖片</label>
+                <%= f.file_field :image, class:"form-control"%>
+                <%=image_tag @project.image.url, width: 320%>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="project_description">描述</label>
+                <%= f.text_area :description, class:"form-control", placeholder:"專案描述", rows: 5%>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="project_web_url">專案網址</label>
+                <%= f.text_field :web_url, class:"form-control", placeholder:"專案網址"%>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="project_github_url">專案 github 網址</label>
+                <%= f.text_field :github_url, class:"form-control", placeholder:"eg. https://github.com/g0v/dev"%>
+            </fieldset>
+ 
+            <fieldset class="form-group">
+                <label for="project_fb_url">專案 Facebook 網址</label>
+                <%= f.text_field :fb_url, class:"form-control", placeholder:"eg. https://www.facebook.com/g0v.tw/"%>
+            </fieldset>
+ 
+            <fieldset class="form-group">
+                <label for="project_tage">標籤</label>
+                <%= f.text_field :tags, class:"form-control", placeholder:"eg. 開放,台北市,投票"%>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+
+    </div>
+</div>
+
