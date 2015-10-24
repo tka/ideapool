@@ -29,10 +29,10 @@ gem 'unicorn'
 
 gem 'carrierwave', "~> 0.10.0"
 
-gem 'capistrano', '~> 3.4.0'
-
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano', '~> 3.4.0'
+gem 'capistrano-rvm'
+gem 'capistrano-rails', group: :development
 
 gem "letter_opener", :group => :development
 
