@@ -22,12 +22,17 @@ gem 'unicorn'
 
 gem 'carrierwave', "~> 0.10.0"
 
-# Use Capistrano for deployment
-gem 'capistrano', '~> 3.4.0'
-gem 'capistrano-rvm'
-gem 'capistrano-rails', group: :development
+gem 'settingslogic'
 
-gem "letter_opener", :group => :development
+# Use Capistrano for deployment
+
+group :development do
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+
+  gem "letter_opener"
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -133,6 +133,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    settingslogic (2.0.9)
     spring (1.4.0)
     sprockets (3.4.0)
       rack (> 1, < 3)
@@ -176,6 +177,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.3)
   sdoc (~> 0.4.0)
+  settingslogic
   spring
   unicorn
   web-console (~> 2.0)
