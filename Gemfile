@@ -30,7 +30,7 @@ group :development do
   gem 'capistrano', '~> 3.4.0'
   gem 'capistrano-rvm'
   gem 'capistrano-rails'
-
+  gem 'capistrano3-unicorn'
   gem "letter_opener"
 end
 
