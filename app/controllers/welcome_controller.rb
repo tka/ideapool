@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @categories = Category.all
-    @projects = Project.all
+    @projects = Project.order(id: :desc)
 
     if params[:category_id].present?
       @projects = @projects.where(category_id: params[:category_id])
