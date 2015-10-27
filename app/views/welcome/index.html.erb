@@ -1,12 +1,20 @@
-<div class="row">
-    <div class="col-sm-12" id="search-bar">
+<div class="row" id="search-bar">
+    <div class="col-sm-4">
         <form method="get" class="form-inline" action="/">
-            <fieldset>
-                <%= select_tag :category_id, options_from_collection_for_select(@categories, :id, :name, params[:category_id]), include_blank: "全部", class: "form-control" %>
+            <div class="form-group">
+                <label>分類</label>
+                <%= select_tag :category_id, options_from_collection_for_select(@categories, :id, :name, params[:category_id]), include_blank: "全部", class: "form-control", onchange: "this.form.submit()" %>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-8">
+        <div class="pull-right">
+            <form method="get" class="form-inline" action="/">
+                <%= hidden_field_tag :category_id, params[:category_id]%>
                 <input class="form-control" type="text" placeholder="Search" name="search" value="<%=params[:search]%>"/>
                 <button class="btn btn" type="submit">Search</button>
-            </fieldset>
-        </form>
+            </form>
+        </div>
     </div>
 </div>
 
@@ -26,3 +34,5 @@
         <% end %>
     </div>
 </div>
+
+
