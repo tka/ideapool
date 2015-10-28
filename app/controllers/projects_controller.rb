@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
   def index
     @categories = Category.all
-    @projects = Project.order(id: :desc)
+    @projects = Project.includes(:category).order(id: :desc)
 
     if params[:category_id].present?
       @projects = @projects.where(category_id: params[:category_id])
