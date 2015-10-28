@@ -24,8 +24,9 @@ gem 'carrierwave', "~> 0.10.0"
 
 gem 'settingslogic'
 
-# Use Capistrano for deployment
+gem 'rack-contrib'
 
+# Use Capistrano for deployment
 group :development do
   gem 'capistrano', '~> 3.4.0'
   gem 'capistrano-rvm'
