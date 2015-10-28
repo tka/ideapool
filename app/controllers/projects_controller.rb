@@ -43,6 +43,11 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def destroy
+    @project.destroy
+    redirect_to root_path, notice: "刪除 #{@project.name} 完成"
+  end
+
   private
 
   def get_project
