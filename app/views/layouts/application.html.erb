@@ -18,9 +18,7 @@
             </nav>
 
             <% flash.each do |key, value| %>
-                <div class="row">
-                    <%= content_tag :div, value, :class => "#{key}" unless value.blank?%>
-                </div>
+                <%= content_tag :div, value, :class => "alert #{bootstrap_flash_class(key)}" unless value.blank?%>
             <% end %>
 
             <%= yield %>
