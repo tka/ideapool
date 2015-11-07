@@ -1,6 +1,7 @@
 # config/application.yml
 defaults: &defaults
   host: localhost
+  assets_host: localhost
 
 development:
   <<: *defaults
